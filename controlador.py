@@ -26,7 +26,7 @@ class Main:
 					if rectClic:
 						carro.enviarComando(grafico.getIndex(rectClic))
 				elif evento.type == MOUSEBUTTONUP:
-						carro.enviarComando(4)
+						carro.enviarComando(6)
 			
 			grafico.dibujar()
 			pygame.display.update()	
@@ -66,19 +66,18 @@ class Grafico:
 			
 		self.rect[0] = Rect(100,   0, 100, 100)
 		self.rect[1] = Rect(200, 100, 100, 100)
-		self.rect[2] = Rect(100, 200, 100, 100)
+		self.rect[2] = Rect(100, 100, 100, 100)
 		self.rect[3] = Rect(  0, 100, 100, 100)
-		self.rect[4] = Rect(100, 100, 100, 100)
+		self.rect[4] = Rect(300,   0, 100, 100)
 
 			
 	def dibujar(self):
 		self.pantalla.fill((255,255,255))
-		pygame.draw.rect (self.pantalla, (0,0,0), self.rect[0])
 		self.pantalla.blit(self.sprite[0], (100,   0))
 		self.pantalla.blit(self.sprite[1], (200, 100))
-		self.pantalla.blit(self.sprite[2], (100, 200))
+		self.pantalla.blit(self.sprite[2], (100, 100))
 		self.pantalla.blit(self.sprite[3], (  0, 100))
-		self.pantalla.blit(self.sprite[4], (100, 100))
+		self.pantalla.blit(self.sprite[4], (300,   0))
 		pygame.display.flip()
 
 	
