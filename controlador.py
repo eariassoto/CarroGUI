@@ -157,6 +157,6 @@ if __name__ == '__main__':
 	config = {}
 	execfile("settings.config", config)
 	ventanaInput = pygame.display.set_mode((320,240))
-	puerto = "COM3"#inputbox.ask(ventanaInput, "Puerto del Carro")
+	puerto = inputbox.ask(ventanaInput, "Puerto del Carro")
 	baud = 9600#inputbox.ask(ventanaInput, "Tasa de baudios")
 	main = Main(puerto, baud)
