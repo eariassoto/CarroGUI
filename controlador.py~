@@ -157,6 +157,6 @@ if __name__ == '__main__':
 	config = {}
 	execfile("settings.config", config)
 	ventanaInput = pygame.display.set_mode((320,240))
-	puerto = "/dev/ttyACM0";
+	puerto = "/dev/ttyACM1";
 	baud = 9600#inputbox.ask(ventanaInput, "Tasa de baudios")
 	main = Main(puerto, baud)
